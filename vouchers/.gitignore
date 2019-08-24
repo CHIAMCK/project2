@@ -1,0 +1,6 @@
+.envrc
+.vscode
+
+lib/
+*.pyc
+__pycache__
