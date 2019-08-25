@@ -7,4 +7,4 @@ class Voucher(models.Model):
 
     discount = models.CharField(max_length=191)
 
-    usage = models.PositiveIntegerField()
+    usage_limit = models.PositiveIntegerField(default=3)

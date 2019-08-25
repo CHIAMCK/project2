@@ -1,22 +1,25 @@
 
 <div class="sh-container-fluid">
-
     <div class="animated fadeIn">
         <div class="row">
             <div class="col-sm-12 text-center">
 	            <div class="">
-		            <div>
+		            <form method="POST" action="{% url 'voucher:check_voucher' %}">
                             {% csrf_token %}
                             {{ form }}
-                    </div>
-	            </div>
+                            <div>
+                                <button type="submit" name="btn">Check</button>
+                            </div>
+                    </form>
+                </div>
+                <div>
+                    <p>{{ discount }}</p>
+                </div>
             </div>
         </div>
 	    <div class="row">
-            <div class="col-sm-12 text-left">
-	            
-             </div>
+            <div class="col-sm-12 text-left"> 
+            </div>
          </div>
-
     </div>
 </div>

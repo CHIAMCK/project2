@@ -18,6 +18,7 @@ from django.urls import path
 from django.conf.urls import include
 
 urlpatterns = [
+    path('/', include('vouchers.url')),
     path('admin/', admin.site.urls),
     path('vouchers/', include('vouchers.url'))
 ]
