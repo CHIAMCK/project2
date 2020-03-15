@@ -19,5 +19,5 @@ test:code:
 deploy_job:
  stage: deploy
  script:
-    echo "ansible-playbook site-uat.yml -l" $project_name"-uat -t i2go -v"
+    echo "ansible-playbook site-uat.yml -l $project_name-uat -t $part -v"
  when: manual
