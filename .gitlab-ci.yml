@@ -20,4 +20,5 @@ deploy_job:
  stage: deploy
  script:
     echo "Deploy to production server"
+    echo "$project_name"
  when: manual
