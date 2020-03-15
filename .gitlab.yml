@@ -1,0 +1,23 @@
+stages: 
+ - test
+ - deploy
+
+image: python:3.6
+
+before_script:
+ - pip install -r requirements.txt
+
+test:code:
+ stage: test
+ 
+ variables:
+  DJANGO_SETTINGS_MODULE: project1.settings
+
+ script:
+  - python manage.py test --settings=project1.settings
+  
+deploy_job:
+ stage: deploy
+ script:
+    echo "Deploy to production server"
+ when: manual
